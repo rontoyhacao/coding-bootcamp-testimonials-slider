@@ -1,0 +1,110 @@
+@import './variable';
+.testimonial-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    background: url(/assets/images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 0 left 0;
+    .slider-wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        position: relative;
+        .slide {
+            display: flex;
+            flex-direction: row;
+            .slide-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-right: -90px;
+                position: relative;
+                margin-left: -5px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: url(/assets/images/pattern-quotes.svg);
+                    background-size: contain;
+                    height: 100px;
+                    width: 120px;
+                    background-repeat: no-repeat;
+                    top: 75px;
+                    left: 95px;
+                }
+                p {
+                    font-weight: 300;
+                    color: $Dark-Blue;
+                    line-height: 45px;
+                    margin: 45px 0 35px;
+                }
+                .author {
+                    display: flex;
+                    flex-direction: row;
+                    h1 {
+                        color: $Dark-Blue;
+                        font-size: 20px;
+                        margin-right: 10px;
+                    }
+                    span {
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: $Grayish-Blue;
+                    }
+                }
+            }
+            .slide-image {
+                z-index: -1;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 660px;
+                    width: 700px;
+                    background: url(/assets/images/pattern-bg.svg);
+                    background-repeat: no-repeat;
+                    z-index: -2;
+                    left: -65px;
+                    top: -90px;
+                }
+                img {
+                    margin-top: -27px;
+                    margin-right: -5px;
+                    border-radius: 5px;
+                    box-shadow: -5px 40px 50px -30px rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+        .button-container {
+            position: absolute;
+            height: 55px;
+            width: 110px;
+            background: white;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 5px 50px -20px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            top: 485px;
+            transform: translate(0);
+            left: calc(100% - 470px);
+            button {
+                border: none;
+                background: none;
+                width: 60px;
+                cursor: pointer;
+                &:hover {
+                    background: rgba(0, 0, 0, 0.1);
+                }
+                &:focus {
+                    outline-offset: -10px;
+                }
+            }
+        }
+        .slide-2 {
+            display: none;
+        }
+    }
+}
